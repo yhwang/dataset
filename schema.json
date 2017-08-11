@@ -1,0 +1,91 @@
+{
+    "edgeIndexes": [],
+    "edgeLabels": [
+        {
+            "multiplicity": "MULTI",
+            "name": "Follow",
+            "signatures": null,
+            "unidirected": false
+        },
+        {
+            "multiplicity": "MULTI",
+            "name": "Like",
+            "signatures": null,
+            "unidirected": false
+        },
+        {
+            "multiplicity": "MULTI",
+            "name": "Retweet",
+            "signatures": null,
+            "unidirected": false
+        },
+        {
+            "multiplicity": "ONE2MANY",
+            "name": "Tweet",
+            "signatures": null,
+            "unidirected": false
+        },
+        {
+            "multiplicity": "MULTI",
+            "name": "Mention",
+            "signatures": null,
+            "unidirected": false
+        }
+    ],
+    "propertyKeys": [
+        {
+            "cardinality": "SINGLE",
+            "dataType": "Integer",
+            "name": "node_id"
+        },
+        {
+            "cardinality": "SINGLE",
+            "dataType": "String",
+            "name": "User"
+        },
+        {
+            "cardinality": "SINGLE",
+            "dataType": "String",
+            "name": "Message"
+        }
+    ],
+    "vertexCentricIndexes": [],
+    "vertexIndexes": [
+        {
+            "composite": true,
+            "name": "node_id",
+            "propertyKeys": [
+                "node_id"
+            ],
+            "unique": true
+        },
+        {
+            "composite": true,
+            "name": "User",
+            "propertyKeys": [
+                "User"
+            ],
+            "unique": false
+        },
+        {
+            "composite": true,
+            "name": "Message",
+            "propertyKeys": [
+                "Message"
+            ],
+            "unique": false
+        }
+    ],
+    "vertexLabels": [
+        {
+            "name": "User",
+            "partition": false,
+            "useStatic": false
+        },
+        {
+            "name": "Message",
+            "partition": false,
+            "useStatic": false
+        }
+    ]
+}
